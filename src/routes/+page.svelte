@@ -24,6 +24,7 @@
     }
 
     function validateDecks(): void {
+        console.log(decks)
         const cardMap: Map<string, { count:number; decks: number[] }> = new Map();
         const duplicatesFound: string[][] = Array(6).fill(null).map(() => []);
 
