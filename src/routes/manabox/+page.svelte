@@ -48,7 +48,7 @@
             const seenInDeck = new Set<string>()
                 deck.cards.forEach(cardRaw => {
                     const card = cardRaw.toLowerCase();
-                    //TODO if (isBasicLand(card)) return; // Skip basic lands
+                    if (isBasicLand(card)) return; // Skip basic lands
 
                     if (seenInDeck.has(card)) return; // only count once per deck
                         seenInDeck.add(card);
